@@ -37,7 +37,6 @@ if (process.argv[2] === "spotify-this-song") {
 	// The song's name
 	// A preview link of the song from Spotify
 	// The album that the song is from
-
 	var spotify = new Spotify({
 		id: "5ba9210f4b554562a4432d4d24998491",
 		secret: "b568ccb28a0d464b9f357e7f8a410878"
@@ -66,6 +65,7 @@ if (process.argv[2] === "spotify-this-song") {
 		console.log("Preview: " + preview);
 		console.log("Album: " + album);
 	});
+
 
 	// var removeSpaces = input.replace(" ", "+");
 
@@ -102,4 +102,27 @@ if (process.argv[2] === "my-tweets") {
   		}
 	})
 }
+
+if (process.argv[2] === "do-what-it-says") {
+	fs.readFile("random.txt", "utf8", function(err, data) {
+		if (err) {
+			console.log(err);
+		} else {
+			console.log(data);
+			// need to take this data and use it as the input for the spotify-this-song command
+
+			// var input = data;
+			// spotifyFunction();
+		}
+	})
+}
+
+
+
+
+
+
+
+
+
 
